@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MBASystemModelStoreContainer" CdmEntityContainer="MBASystemEntities">
+    <EntitySetMapping Name="AlumiModules">
+      <EntityTypeMapping TypeName="MBASystemModel.AlumiModule">
+        <MappingFragment StoreEntitySet="AlumiModule">
+          <ScalarProperty Name="AlumiModule_ID" ColumnName="AlumiModule_ID" />
+          <ScalarProperty Name="Module_Code" ColumnName="Module_Code" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="ResultStatus" ColumnName="ResultStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alumni">
+      <EntityTypeMapping TypeName="MBASystemModel.Alumnus">
+        <MappingFragment StoreEntitySet="Alumni">
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Current_Position" ColumnName="Current_Position" />
+          <ScalarProperty Name="Current_Salery" ColumnName="Current_Salery" />
+          <ScalarProperty Name="GPA" ColumnName="GPA" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Graduated_ON" ColumnName="Graduated_ON" />
+          <ScalarProperty Name="School_ID" ColumnName="School_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="MBASystemModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="Course_Code" ColumnName="Course_Code" />
+          <ScalarProperty Name="Course_Name" ColumnName="Course_Name" />
+          <ScalarProperty Name="Course_Topic_Covered" ColumnName="Course_Topic_Covered" />
+          <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+          <ScalarProperty Name="Curriculum_Code" ColumnName="Curriculum_Code" />
+          <ScalarProperty Name="ICCSD_ID" ColumnName="ICCSD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Curricula">
+      <EntityTypeMapping TypeName="MBASystemModel.Curriculum">
+        <MappingFragment StoreEntitySet="Curriculum">
+          <ScalarProperty Name="Curriculum_Code" ColumnName="Curriculum_Code" />
+          <ScalarProperty Name="Curriculum_Name" ColumnName="Curriculum_Name" />
+          <ScalarProperty Name="Current_Curriculum" ColumnName="Current_Curriculum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="MBASystemModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_Address" ColumnName="Employee_Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ICCSDs">
+      <EntityTypeMapping TypeName="MBASystemModel.ICCSD">
+        <MappingFragment StoreEntitySet="ICCSD">
+          <ScalarProperty Name="ICCSD_ID" ColumnName="ICCSD_ID" />
+          <ScalarProperty Name="ICCSD_Status" ColumnName="ICCSD_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="MBASystemModel.Location">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="Location_ID" ColumnName="Location_ID" />
+          <ScalarProperty Name="Sub_Urban" ColumnName="Sub_Urban" />
+          <ScalarProperty Name="Major_City" ColumnName="Major_City" />
+          <ScalarProperty Name="County" ColumnName="County" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="MBASystemModel.Module">
+        <MappingFragment StoreEntitySet="Module">
+          <ScalarProperty Name="Module_Code" ColumnName="Module_Code" />
+          <ScalarProperty Name="Module_Duration" ColumnName="Module_Duration" />
+          <ScalarProperty Name="Credit_points" ColumnName="Credit_points" />
+          <ScalarProperty Name="Module_Name" ColumnName="Module_Name" />
+          <ScalarProperty Name="Course_Code" ColumnName="Course_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegisteredModules">
+      <EntityTypeMapping TypeName="MBASystemModel.RegisteredModule">
+        <MappingFragment StoreEntitySet="RegisteredModule">
+          <ScalarProperty Name="RegisteredModule_ID" ColumnName="RegisteredModule_ID" />
+          <ScalarProperty Name="Module_Code" ColumnName="Module_Code" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="ResultStatus" ColumnName="ResultStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schools">
+      <EntityTypeMapping TypeName="MBASystemModel.School">
+        <MappingFragment StoreEntitySet="School">
+          <ScalarProperty Name="School_ID" ColumnName="School_ID" />
+          <ScalarProperty Name="School_Name" ColumnName="School_Name" />
+          <ScalarProperty Name="ICCSD_ID" ColumnName="ICCSD_ID" />
+          <ScalarProperty Name="No_of_Grads" ColumnName="No_of_Grads" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="Library_Size" ColumnName="Library_Size" />
+          <ScalarProperty Name="Location_ID" ColumnName="Location_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchoolCurriculums">
+      <EntityTypeMapping TypeName="MBASystemModel.SchoolCurriculum">
+        <MappingFragment StoreEntitySet="SchoolCurriculum">
+          <ScalarProperty Name="SchoolCurriculum_ID" ColumnName="SchoolCurriculum_ID" />
+          <ScalarProperty Name="Curriculum_Code" ColumnName="Curriculum_Code" />
+          <ScalarProperty Name="School_ID" ColumnName="School_ID" />
+          <ScalarProperty Name="Last_Updated" ColumnName="Last_Updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="MBASystemModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Enrollment_Date" ColumnName="Enrollment_Date" />
+          <ScalarProperty Name="Expected_Graduation" ColumnName="Expected_Graduation" />
+          <ScalarProperty Name="Current_GPA" ColumnName="Current_GPA" />
+          <ScalarProperty Name="School_ID" ColumnName="School_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Types">
+      <EntityTypeMapping TypeName="MBASystemModel.Type">
+        <MappingFragment StoreEntitySet="Type">
+          <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+          <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MBASystemModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

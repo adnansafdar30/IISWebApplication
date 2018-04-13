@@ -1,0 +1,1008 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MBASystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AlumiModule">
+          <Key>
+            <PropertyRef Name="AlumiModule_ID" />
+          </Key>
+          <Property Name="AlumiModule_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Module_Code" Type="int" />
+          <Property Name="SSN" Type="int" />
+          <Property Name="ResultStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="Alumni">
+          <Key>
+            <PropertyRef Name="SSN" />
+          </Key>
+          <Property Name="SSN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="200" />
+          <Property Name="Current_Position" Type="varchar" MaxLength="30" />
+          <Property Name="Current_Salery" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="GPA" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Employee_ID" Type="int" />
+          <Property Name="Graduated_ON" Type="int" />
+          <Property Name="School_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Course">
+          <Key>
+            <PropertyRef Name="Course_Code" />
+          </Key>
+          <Property Name="Course_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Course_Name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Course_Topic_Covered" Type="varchar" MaxLength="50" />
+          <Property Name="Type_ID" Type="int" />
+          <Property Name="Curriculum_Code" Type="int" />
+          <Property Name="ICCSD_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Curriculum">
+          <Key>
+            <PropertyRef Name="Curriculum_Code" />
+          </Key>
+          <Property Name="Curriculum_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Curriculum_Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Current_Curriculum" Type="bit" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Employee_ID" />
+          </Key>
+          <Property Name="Employee_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Employee_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Employee_Address" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="ICCSD">
+          <Key>
+            <PropertyRef Name="ICCSD_ID" />
+          </Key>
+          <Property Name="ICCSD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ICCSD_Status" Type="int" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="Location_ID" />
+          </Key>
+          <Property Name="Location_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sub_Urban" Type="varchar" MaxLength="50" />
+          <Property Name="Major_City" Type="varchar" MaxLength="50" />
+          <Property Name="County" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Module">
+          <Key>
+            <PropertyRef Name="Module_Code" />
+          </Key>
+          <Property Name="Module_Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Module_Duration" Type="int" />
+          <Property Name="Credit_points" Type="int" />
+          <Property Name="Module_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Course_Code" Type="int" />
+        </EntityType>
+        <EntityType Name="RegisteredModule">
+          <Key>
+            <PropertyRef Name="RegisteredModule_ID" />
+          </Key>
+          <Property Name="RegisteredModule_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Module_Code" Type="int" />
+          <Property Name="SSN" Type="int" />
+          <Property Name="ResultStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="School">
+          <Key>
+            <PropertyRef Name="School_ID" />
+          </Key>
+          <Property Name="School_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="School_Name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ICCSD_ID" Type="int" />
+          <Property Name="No_of_Grads" Type="int" />
+          <Property Name="Budget" Type="int" />
+          <Property Name="Library_Size" Type="int" />
+          <Property Name="Location_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="SchoolCurriculum">
+          <Key>
+            <PropertyRef Name="SchoolCurriculum_ID" />
+          </Key>
+          <Property Name="SchoolCurriculum_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Curriculum_Code" Type="int" />
+          <Property Name="School_ID" Type="int" />
+          <Property Name="Last_Updated" Type="int" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="SSN" />
+          </Key>
+          <Property Name="SSN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="200" />
+          <Property Name="Enrollment_Date" Type="datetime" />
+          <Property Name="Expected_Graduation" Type="int" />
+          <Property Name="Current_GPA" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="School_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Type">
+          <Key>
+            <PropertyRef Name="Type_ID" />
+          </Key>
+          <Property Name="Type_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type_Name" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MBASystem.dbo.Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_AlumiModule_Alumni">
+          <End Role="Alumni" Type="Self.Alumni" Multiplicity="0..1" />
+          <End Role="AlumiModule" Type="Self.AlumiModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumni">
+              <PropertyRef Name="SSN" />
+            </Principal>
+            <Dependent Role="AlumiModule">
+              <PropertyRef Name="SSN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlumiModule_Module">
+          <End Role="Module" Type="Self.Module" Multiplicity="0..1" />
+          <End Role="AlumiModule" Type="Self.AlumiModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Module">
+              <PropertyRef Name="Module_Code" />
+            </Principal>
+            <Dependent Role="AlumiModule">
+              <PropertyRef Name="Module_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alumni_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Alumni" Type="Self.Alumni" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Alumni">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alumni_School">
+          <End Role="School" Type="Self.School" Multiplicity="0..1" />
+          <End Role="Alumni" Type="Self.Alumni" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="School">
+              <PropertyRef Name="School_ID" />
+            </Principal>
+            <Dependent Role="Alumni">
+              <PropertyRef Name="School_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Course_Curriculum">
+          <End Role="Curriculum" Type="Self.Curriculum" Multiplicity="0..1" />
+          <End Role="Course" Type="Self.Course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curriculum">
+              <PropertyRef Name="Curriculum_Code" />
+            </Principal>
+            <Dependent Role="Course">
+              <PropertyRef Name="Curriculum_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Course_ICCSD">
+          <End Role="ICCSD" Type="Self.ICCSD" Multiplicity="0..1" />
+          <End Role="Course" Type="Self.Course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ICCSD">
+              <PropertyRef Name="ICCSD_ID" />
+            </Principal>
+            <Dependent Role="Course">
+              <PropertyRef Name="ICCSD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Course_Type">
+          <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
+          <End Role="Course" Type="Self.Course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type">
+              <PropertyRef Name="Type_ID" />
+            </Principal>
+            <Dependent Role="Course">
+              <PropertyRef Name="Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Module_Course">
+          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+          <End Role="Module" Type="Self.Module" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Course_Code" />
+            </Principal>
+            <Dependent Role="Module">
+              <PropertyRef Name="Course_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegisteredModule_Module">
+          <End Role="Module" Type="Self.Module" Multiplicity="0..1" />
+          <End Role="RegisteredModule" Type="Self.RegisteredModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Module">
+              <PropertyRef Name="Module_Code" />
+            </Principal>
+            <Dependent Role="RegisteredModule">
+              <PropertyRef Name="Module_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegisteredModule_Student">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="RegisteredModule" Type="Self.RegisteredModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="SSN" />
+            </Principal>
+            <Dependent Role="RegisteredModule">
+              <PropertyRef Name="SSN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_School_ICCSD">
+          <End Role="ICCSD" Type="Self.ICCSD" Multiplicity="0..1" />
+          <End Role="School" Type="Self.School" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ICCSD">
+              <PropertyRef Name="ICCSD_ID" />
+            </Principal>
+            <Dependent Role="School">
+              <PropertyRef Name="ICCSD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_School_Locations">
+          <End Role="Locations" Type="Self.Locations" Multiplicity="0..1" />
+          <End Role="School" Type="Self.School" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="Location_ID" />
+            </Principal>
+            <Dependent Role="School">
+              <PropertyRef Name="Location_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SchoolCurriculum_Curriculum">
+          <End Role="Curriculum" Type="Self.Curriculum" Multiplicity="0..1" />
+          <End Role="SchoolCurriculum" Type="Self.SchoolCurriculum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curriculum">
+              <PropertyRef Name="Curriculum_Code" />
+            </Principal>
+            <Dependent Role="SchoolCurriculum">
+              <PropertyRef Name="Curriculum_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SchoolCurriculum_School">
+          <End Role="School" Type="Self.School" Multiplicity="0..1" />
+          <End Role="SchoolCurriculum" Type="Self.SchoolCurriculum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="School">
+              <PropertyRef Name="School_ID" />
+            </Principal>
+            <Dependent Role="SchoolCurriculum">
+              <PropertyRef Name="School_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_School">
+          <End Role="School" Type="Self.School" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="School">
+              <PropertyRef Name="School_ID" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="School_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MBASystemModelStoreContainer">
+          <EntitySet Name="AlumiModule" EntityType="Self.AlumiModule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Alumni" EntityType="Self.Alumni" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Curriculum" EntityType="Self.Curriculum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ICCSD" EntityType="Self.ICCSD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Module" EntityType="Self.Module" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegisteredModule" EntityType="Self.RegisteredModule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="School" EntityType="Self.School" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SchoolCurriculum" EntityType="Self.SchoolCurriculum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Users].[User_ID] AS [User_ID], 
+    [Users].[Username] AS [Username], 
+    [Users].[Password] AS [Password]
+    FROM [dbo].[Users] AS [Users]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_AlumiModule_Alumni" Association="Self.FK_AlumiModule_Alumni">
+            <End Role="Alumni" EntitySet="Alumni" />
+            <End Role="AlumiModule" EntitySet="AlumiModule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlumiModule_Module" Association="Self.FK_AlumiModule_Module">
+            <End Role="Module" EntitySet="Module" />
+            <End Role="AlumiModule" EntitySet="AlumiModule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alumni_Employee" Association="Self.FK_Alumni_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Alumni" EntitySet="Alumni" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alumni_School" Association="Self.FK_Alumni_School">
+            <End Role="School" EntitySet="School" />
+            <End Role="Alumni" EntitySet="Alumni" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Course_Curriculum" Association="Self.FK_Course_Curriculum">
+            <End Role="Curriculum" EntitySet="Curriculum" />
+            <End Role="Course" EntitySet="Course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Course_ICCSD" Association="Self.FK_Course_ICCSD">
+            <End Role="ICCSD" EntitySet="ICCSD" />
+            <End Role="Course" EntitySet="Course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Course_Type" Association="Self.FK_Course_Type">
+            <End Role="Type" EntitySet="Type" />
+            <End Role="Course" EntitySet="Course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Module_Course" Association="Self.FK_Module_Course">
+            <End Role="Course" EntitySet="Course" />
+            <End Role="Module" EntitySet="Module" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegisteredModule_Module" Association="Self.FK_RegisteredModule_Module">
+            <End Role="Module" EntitySet="Module" />
+            <End Role="RegisteredModule" EntitySet="RegisteredModule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegisteredModule_Student" Association="Self.FK_RegisteredModule_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="RegisteredModule" EntitySet="RegisteredModule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_School_ICCSD" Association="Self.FK_School_ICCSD">
+            <End Role="ICCSD" EntitySet="ICCSD" />
+            <End Role="School" EntitySet="School" />
+          </AssociationSet>
+          <AssociationSet Name="FK_School_Locations" Association="Self.FK_School_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="School" EntitySet="School" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SchoolCurriculum_Curriculum" Association="Self.FK_SchoolCurriculum_Curriculum">
+            <End Role="Curriculum" EntitySet="Curriculum" />
+            <End Role="SchoolCurriculum" EntitySet="SchoolCurriculum" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SchoolCurriculum_School" Association="Self.FK_SchoolCurriculum_School">
+            <End Role="School" EntitySet="School" />
+            <End Role="SchoolCurriculum" EntitySet="SchoolCurriculum" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_School" Association="Self.FK_Student_School">
+            <End Role="School" EntitySet="School" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MBASystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AlumiModule">
+          <Key>
+            <PropertyRef Name="AlumiModule_ID" />
+          </Key>
+          <Property Name="AlumiModule_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Module_Code" Type="Int32" />
+          <Property Name="SSN" Type="Int32" />
+          <Property Name="ResultStatus" Type="Boolean" />
+          <NavigationProperty Name="Alumnus" Relationship="Self.FK_AlumiModule_Alumni" FromRole="AlumiModule" ToRole="Alumni" />
+          <NavigationProperty Name="Module" Relationship="Self.FK_AlumiModule_Module" FromRole="AlumiModule" ToRole="Module" />
+        </EntityType>
+        <EntityType Name="Alumnus">
+          <Key>
+            <PropertyRef Name="SSN" />
+          </Key>
+          <Property Name="SSN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Current_Position" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Current_Salery" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="GPA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Employee_ID" Type="Int32" />
+          <Property Name="Graduated_ON" Type="Int32" />
+          <Property Name="School_ID" Type="Int32" />
+          <NavigationProperty Name="AlumiModules" Relationship="Self.FK_AlumiModule_Alumni" FromRole="Alumni" ToRole="AlumiModule" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Alumni_Employee" FromRole="Alumni" ToRole="Employee" />
+          <NavigationProperty Name="School" Relationship="Self.FK_Alumni_School" FromRole="Alumni" ToRole="School" />
+        </EntityType>
+        <EntityType Name="Course">
+          <Key>
+            <PropertyRef Name="Course_Code" />
+          </Key>
+          <Property Name="Course_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Course_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Course_Topic_Covered" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Type_ID" Type="Int32" />
+          <Property Name="Curriculum_Code" Type="Int32" />
+          <Property Name="ICCSD_ID" Type="Int32" />
+          <NavigationProperty Name="Curriculum" Relationship="Self.FK_Course_Curriculum" FromRole="Course" ToRole="Curriculum" />
+          <NavigationProperty Name="ICCSD" Relationship="Self.FK_Course_ICCSD" FromRole="Course" ToRole="ICCSD" />
+          <NavigationProperty Name="Type" Relationship="Self.FK_Course_Type" FromRole="Course" ToRole="Type" />
+          <NavigationProperty Name="Modules" Relationship="Self.FK_Module_Course" FromRole="Course" ToRole="Module" />
+        </EntityType>
+        <EntityType Name="Curriculum">
+          <Key>
+            <PropertyRef Name="Curriculum_Code" />
+          </Key>
+          <Property Name="Curriculum_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Curriculum_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Current_Curriculum" Type="Boolean" />
+          <NavigationProperty Name="Courses" Relationship="Self.FK_Course_Curriculum" FromRole="Curriculum" ToRole="Course" />
+          <NavigationProperty Name="SchoolCurriculums" Relationship="Self.FK_SchoolCurriculum_Curriculum" FromRole="Curriculum" ToRole="SchoolCurriculum" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Employee_ID" />
+          </Key>
+          <Property Name="Employee_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Employee_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Employee_Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Alumni" Relationship="Self.FK_Alumni_Employee" FromRole="Employee" ToRole="Alumni" />
+        </EntityType>
+        <EntityType Name="ICCSD">
+          <Key>
+            <PropertyRef Name="ICCSD_ID" />
+          </Key>
+          <Property Name="ICCSD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ICCSD_Status" Type="Int32" />
+          <NavigationProperty Name="Courses" Relationship="Self.FK_Course_ICCSD" FromRole="ICCSD" ToRole="Course" />
+          <NavigationProperty Name="Schools" Relationship="Self.FK_School_ICCSD" FromRole="ICCSD" ToRole="School" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="Location_ID" />
+          </Key>
+          <Property Name="Location_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sub_Urban" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Major_City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="County" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Schools" Relationship="Self.FK_School_Locations" FromRole="Locations" ToRole="School" />
+        </EntityType>
+        <EntityType Name="Module">
+          <Key>
+            <PropertyRef Name="Module_Code" />
+          </Key>
+          <Property Name="Module_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Module_Duration" Type="Int32" />
+          <Property Name="Credit_points" Type="Int32" />
+          <Property Name="Module_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Course_Code" Type="Int32" />
+          <NavigationProperty Name="AlumiModules" Relationship="Self.FK_AlumiModule_Module" FromRole="Module" ToRole="AlumiModule" />
+          <NavigationProperty Name="Course" Relationship="Self.FK_Module_Course" FromRole="Module" ToRole="Course" />
+          <NavigationProperty Name="RegisteredModules" Relationship="Self.FK_RegisteredModule_Module" FromRole="Module" ToRole="RegisteredModule" />
+        </EntityType>
+        <EntityType Name="RegisteredModule">
+          <Key>
+            <PropertyRef Name="RegisteredModule_ID" />
+          </Key>
+          <Property Name="RegisteredModule_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Module_Code" Type="Int32" />
+          <Property Name="SSN" Type="Int32" />
+          <Property Name="ResultStatus" Type="Boolean" />
+          <NavigationProperty Name="Module" Relationship="Self.FK_RegisteredModule_Module" FromRole="RegisteredModule" ToRole="Module" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_RegisteredModule_Student" FromRole="RegisteredModule" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="School">
+          <Key>
+            <PropertyRef Name="School_ID" />
+          </Key>
+          <Property Name="School_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="School_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ICCSD_ID" Type="Int32" />
+          <Property Name="No_of_Grads" Type="Int32" />
+          <Property Name="Budget" Type="Int32" />
+          <Property Name="Library_Size" Type="Int32" />
+          <Property Name="Location_ID" Type="Int32" />
+          <NavigationProperty Name="Alumni" Relationship="Self.FK_Alumni_School" FromRole="School" ToRole="Alumni" />
+          <NavigationProperty Name="ICCSD" Relationship="Self.FK_School_ICCSD" FromRole="School" ToRole="ICCSD" />
+          <NavigationProperty Name="Location" Relationship="Self.FK_School_Locations" FromRole="School" ToRole="Locations" />
+          <NavigationProperty Name="SchoolCurriculums" Relationship="Self.FK_SchoolCurriculum_School" FromRole="School" ToRole="SchoolCurriculum" />
+          <NavigationProperty Name="Students" Relationship="Self.FK_Student_School" FromRole="School" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="SchoolCurriculum">
+          <Key>
+            <PropertyRef Name="SchoolCurriculum_ID" />
+          </Key>
+          <Property Name="SchoolCurriculum_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Curriculum_Code" Type="Int32" />
+          <Property Name="School_ID" Type="Int32" />
+          <Property Name="Last_Updated" Type="Int32" />
+          <NavigationProperty Name="Curriculum" Relationship="Self.FK_SchoolCurriculum_Curriculum" FromRole="SchoolCurriculum" ToRole="Curriculum" />
+          <NavigationProperty Name="School" Relationship="Self.FK_SchoolCurriculum_School" FromRole="SchoolCurriculum" ToRole="School" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="SSN" />
+          </Key>
+          <Property Name="SSN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Enrollment_Date" Type="DateTime" Precision="3" />
+          <Property Name="Expected_Graduation" Type="Int32" />
+          <Property Name="Current_GPA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="School_ID" Type="Int32" />
+          <NavigationProperty Name="RegisteredModules" Relationship="Self.FK_RegisteredModule_Student" FromRole="Student" ToRole="RegisteredModule" />
+          <NavigationProperty Name="School" Relationship="Self.FK_Student_School" FromRole="Student" ToRole="School" />
+        </EntityType>
+        <EntityType Name="Type">
+          <Key>
+            <PropertyRef Name="Type_ID" />
+          </Key>
+          <Property Name="Type_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Courses" Relationship="Self.FK_Course_Type" FromRole="Type" ToRole="Course" />
+        </EntityType>
+        <Association Name="FK_AlumiModule_Alumni">
+          <End Role="Alumni" Type="Self.Alumnus" Multiplicity="0..1" />
+          <End Role="AlumiModule" Type="Self.AlumiModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumni">
+              <PropertyRef Name="SSN" />
+            </Principal>
+            <Dependent Role="AlumiModule">
+              <PropertyRef Name="SSN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlumiModule_Module">
+          <End Role="Module" Type="Self.Module" Multiplicity="0..1" />
+          <End Role="AlumiModule" Type="Self.AlumiModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Module">
+              <PropertyRef Name="Module_Code" />
+            </Principal>
+            <Dependent Role="AlumiModule">
+              <PropertyRef Name="Module_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alumni_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Alumni" Type="Self.Alumnus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Alumni">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alumni_School">
+          <End Role="School" Type="Self.School" Multiplicity="0..1" />
+          <End Role="Alumni" Type="Self.Alumnus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="School">
+              <PropertyRef Name="School_ID" />
+            </Principal>
+            <Dependent Role="Alumni">
+              <PropertyRef Name="School_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Course_Curriculum">
+          <End Role="Curriculum" Type="Self.Curriculum" Multiplicity="0..1" />
+          <End Role="Course" Type="Self.Course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curriculum">
+              <PropertyRef Name="Curriculum_Code" />
+            </Principal>
+            <Dependent Role="Course">
+              <PropertyRef Name="Curriculum_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Course_ICCSD">
+          <End Role="ICCSD" Type="Self.ICCSD" Multiplicity="0..1" />
+          <End Role="Course" Type="Self.Course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ICCSD">
+              <PropertyRef Name="ICCSD_ID" />
+            </Principal>
+            <Dependent Role="Course">
+              <PropertyRef Name="ICCSD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Course_Type">
+          <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
+          <End Role="Course" Type="Self.Course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type">
+              <PropertyRef Name="Type_ID" />
+            </Principal>
+            <Dependent Role="Course">
+              <PropertyRef Name="Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Module_Course">
+          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+          <End Role="Module" Type="Self.Module" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Course_Code" />
+            </Principal>
+            <Dependent Role="Module">
+              <PropertyRef Name="Course_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SchoolCurriculum_Curriculum">
+          <End Role="Curriculum" Type="Self.Curriculum" Multiplicity="0..1" />
+          <End Role="SchoolCurriculum" Type="Self.SchoolCurriculum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curriculum">
+              <PropertyRef Name="Curriculum_Code" />
+            </Principal>
+            <Dependent Role="SchoolCurriculum">
+              <PropertyRef Name="Curriculum_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_School_ICCSD">
+          <End Role="ICCSD" Type="Self.ICCSD" Multiplicity="0..1" />
+          <End Role="School" Type="Self.School" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ICCSD">
+              <PropertyRef Name="ICCSD_ID" />
+            </Principal>
+            <Dependent Role="School">
+              <PropertyRef Name="ICCSD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_School_Locations">
+          <End Role="Locations" Type="Self.Location" Multiplicity="0..1" />
+          <End Role="School" Type="Self.School" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="Location_ID" />
+            </Principal>
+            <Dependent Role="School">
+              <PropertyRef Name="Location_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegisteredModule_Module">
+          <End Role="Module" Type="Self.Module" Multiplicity="0..1" />
+          <End Role="RegisteredModule" Type="Self.RegisteredModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Module">
+              <PropertyRef Name="Module_Code" />
+            </Principal>
+            <Dependent Role="RegisteredModule">
+              <PropertyRef Name="Module_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegisteredModule_Student">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="RegisteredModule" Type="Self.RegisteredModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="SSN" />
+            </Principal>
+            <Dependent Role="RegisteredModule">
+              <PropertyRef Name="SSN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SchoolCurriculum_School">
+          <End Role="School" Type="Self.School" Multiplicity="0..1" />
+          <End Role="SchoolCurriculum" Type="Self.SchoolCurriculum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="School">
+              <PropertyRef Name="School_ID" />
+            </Principal>
+            <Dependent Role="SchoolCurriculum">
+              <PropertyRef Name="School_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_School">
+          <End Role="School" Type="Self.School" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="School">
+              <PropertyRef Name="School_ID" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="School_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MBASystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AlumiModules" EntityType="Self.AlumiModule" />
+          <EntitySet Name="Alumni" EntityType="Self.Alumnus" />
+          <EntitySet Name="Courses" EntityType="Self.Course" />
+          <EntitySet Name="Curricula" EntityType="Self.Curriculum" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="ICCSDs" EntityType="Self.ICCSD" />
+          <EntitySet Name="Locations" EntityType="Self.Location" />
+          <EntitySet Name="Modules" EntityType="Self.Module" />
+          <EntitySet Name="RegisteredModules" EntityType="Self.RegisteredModule" />
+          <EntitySet Name="Schools" EntityType="Self.School" />
+          <EntitySet Name="SchoolCurriculums" EntityType="Self.SchoolCurriculum" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <EntitySet Name="Types" EntityType="Self.Type" />
+          <AssociationSet Name="FK_AlumiModule_Alumni" Association="Self.FK_AlumiModule_Alumni">
+            <End Role="Alumni" EntitySet="Alumni" />
+            <End Role="AlumiModule" EntitySet="AlumiModules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlumiModule_Module" Association="Self.FK_AlumiModule_Module">
+            <End Role="Module" EntitySet="Modules" />
+            <End Role="AlumiModule" EntitySet="AlumiModules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alumni_Employee" Association="Self.FK_Alumni_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Alumni" EntitySet="Alumni" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alumni_School" Association="Self.FK_Alumni_School">
+            <End Role="School" EntitySet="Schools" />
+            <End Role="Alumni" EntitySet="Alumni" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Course_Curriculum" Association="Self.FK_Course_Curriculum">
+            <End Role="Curriculum" EntitySet="Curricula" />
+            <End Role="Course" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Course_ICCSD" Association="Self.FK_Course_ICCSD">
+            <End Role="ICCSD" EntitySet="ICCSDs" />
+            <End Role="Course" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Course_Type" Association="Self.FK_Course_Type">
+            <End Role="Type" EntitySet="Types" />
+            <End Role="Course" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Module_Course" Association="Self.FK_Module_Course">
+            <End Role="Course" EntitySet="Courses" />
+            <End Role="Module" EntitySet="Modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SchoolCurriculum_Curriculum" Association="Self.FK_SchoolCurriculum_Curriculum">
+            <End Role="Curriculum" EntitySet="Curricula" />
+            <End Role="SchoolCurriculum" EntitySet="SchoolCurriculums" />
+          </AssociationSet>
+          <AssociationSet Name="FK_School_ICCSD" Association="Self.FK_School_ICCSD">
+            <End Role="ICCSD" EntitySet="ICCSDs" />
+            <End Role="School" EntitySet="Schools" />
+          </AssociationSet>
+          <AssociationSet Name="FK_School_Locations" Association="Self.FK_School_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="School" EntitySet="Schools" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegisteredModule_Module" Association="Self.FK_RegisteredModule_Module">
+            <End Role="Module" EntitySet="Modules" />
+            <End Role="RegisteredModule" EntitySet="RegisteredModules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegisteredModule_Student" Association="Self.FK_RegisteredModule_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="RegisteredModule" EntitySet="RegisteredModules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SchoolCurriculum_School" Association="Self.FK_SchoolCurriculum_School">
+            <End Role="School" EntitySet="Schools" />
+            <End Role="SchoolCurriculum" EntitySet="SchoolCurriculums" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_School" Association="Self.FK_Student_School">
+            <End Role="School" EntitySet="Schools" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <EntitySet Name="Users" EntityType="MBASystemModel.User" />
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MBASystemModelStoreContainer" CdmEntityContainer="MBASystemEntities">
+          <EntitySetMapping Name="AlumiModules">
+            <EntityTypeMapping TypeName="MBASystemModel.AlumiModule">
+              <MappingFragment StoreEntitySet="AlumiModule">
+                <ScalarProperty Name="AlumiModule_ID" ColumnName="AlumiModule_ID" />
+                <ScalarProperty Name="Module_Code" ColumnName="Module_Code" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="ResultStatus" ColumnName="ResultStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Alumni">
+            <EntityTypeMapping TypeName="MBASystemModel.Alumnus">
+              <MappingFragment StoreEntitySet="Alumni">
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Current_Position" ColumnName="Current_Position" />
+                <ScalarProperty Name="Current_Salery" ColumnName="Current_Salery" />
+                <ScalarProperty Name="GPA" ColumnName="GPA" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Graduated_ON" ColumnName="Graduated_ON" />
+                <ScalarProperty Name="School_ID" ColumnName="School_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Courses">
+            <EntityTypeMapping TypeName="MBASystemModel.Course">
+              <MappingFragment StoreEntitySet="Course">
+                <ScalarProperty Name="Course_Code" ColumnName="Course_Code" />
+                <ScalarProperty Name="Course_Name" ColumnName="Course_Name" />
+                <ScalarProperty Name="Course_Topic_Covered" ColumnName="Course_Topic_Covered" />
+                <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+                <ScalarProperty Name="Curriculum_Code" ColumnName="Curriculum_Code" />
+                <ScalarProperty Name="ICCSD_ID" ColumnName="ICCSD_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Curricula">
+            <EntityTypeMapping TypeName="MBASystemModel.Curriculum">
+              <MappingFragment StoreEntitySet="Curriculum">
+                <ScalarProperty Name="Curriculum_Code" ColumnName="Curriculum_Code" />
+                <ScalarProperty Name="Curriculum_Name" ColumnName="Curriculum_Name" />
+                <ScalarProperty Name="Current_Curriculum" ColumnName="Current_Curriculum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="MBASystemModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+                <ScalarProperty Name="Employee_Address" ColumnName="Employee_Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCSDs">
+            <EntityTypeMapping TypeName="MBASystemModel.ICCSD">
+              <MappingFragment StoreEntitySet="ICCSD">
+                <ScalarProperty Name="ICCSD_ID" ColumnName="ICCSD_ID" />
+                <ScalarProperty Name="ICCSD_Status" ColumnName="ICCSD_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="MBASystemModel.Location">
+              <MappingFragment StoreEntitySet="Locations">
+                <ScalarProperty Name="Location_ID" ColumnName="Location_ID" />
+                <ScalarProperty Name="Sub_Urban" ColumnName="Sub_Urban" />
+                <ScalarProperty Name="Major_City" ColumnName="Major_City" />
+                <ScalarProperty Name="County" ColumnName="County" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modules">
+            <EntityTypeMapping TypeName="MBASystemModel.Module">
+              <MappingFragment StoreEntitySet="Module">
+                <ScalarProperty Name="Module_Code" ColumnName="Module_Code" />
+                <ScalarProperty Name="Module_Duration" ColumnName="Module_Duration" />
+                <ScalarProperty Name="Credit_points" ColumnName="Credit_points" />
+                <ScalarProperty Name="Module_Name" ColumnName="Module_Name" />
+                <ScalarProperty Name="Course_Code" ColumnName="Course_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegisteredModules">
+            <EntityTypeMapping TypeName="MBASystemModel.RegisteredModule">
+              <MappingFragment StoreEntitySet="RegisteredModule">
+                <ScalarProperty Name="RegisteredModule_ID" ColumnName="RegisteredModule_ID" />
+                <ScalarProperty Name="Module_Code" ColumnName="Module_Code" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="ResultStatus" ColumnName="ResultStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schools">
+            <EntityTypeMapping TypeName="MBASystemModel.School">
+              <MappingFragment StoreEntitySet="School">
+                <ScalarProperty Name="School_ID" ColumnName="School_ID" />
+                <ScalarProperty Name="School_Name" ColumnName="School_Name" />
+                <ScalarProperty Name="ICCSD_ID" ColumnName="ICCSD_ID" />
+                <ScalarProperty Name="No_of_Grads" ColumnName="No_of_Grads" />
+                <ScalarProperty Name="Budget" ColumnName="Budget" />
+                <ScalarProperty Name="Library_Size" ColumnName="Library_Size" />
+                <ScalarProperty Name="Location_ID" ColumnName="Location_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SchoolCurriculums">
+            <EntityTypeMapping TypeName="MBASystemModel.SchoolCurriculum">
+              <MappingFragment StoreEntitySet="SchoolCurriculum">
+                <ScalarProperty Name="SchoolCurriculum_ID" ColumnName="SchoolCurriculum_ID" />
+                <ScalarProperty Name="Curriculum_Code" ColumnName="Curriculum_Code" />
+                <ScalarProperty Name="School_ID" ColumnName="School_ID" />
+                <ScalarProperty Name="Last_Updated" ColumnName="Last_Updated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="MBASystemModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Enrollment_Date" ColumnName="Enrollment_Date" />
+                <ScalarProperty Name="Expected_Graduation" ColumnName="Expected_Graduation" />
+                <ScalarProperty Name="Current_GPA" ColumnName="Current_GPA" />
+                <ScalarProperty Name="School_ID" ColumnName="School_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Types">
+            <EntityTypeMapping TypeName="MBASystemModel.Type">
+              <MappingFragment StoreEntitySet="Type">
+                <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+                <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MBASystemModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

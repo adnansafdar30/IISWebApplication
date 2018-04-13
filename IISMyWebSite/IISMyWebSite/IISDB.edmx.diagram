@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6dbf4f1023f0433c857cf8195823735b" Name="Diagram1">
+        <EntityTypeShape EntityType="MBASystemModel.AlumiModule" Width="1.5" PointX="8.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.Alumnus" Width="1.5" PointX="8.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.Course" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.Curriculum" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.Employee" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.ICCSD" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.Location" Width="1.5" PointX="3.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.Module" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.RegisteredModule" Width="1.5" PointX="10.5" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.School" Width="1.5" PointX="6" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.SchoolCurriculum" Width="1.5" PointX="11.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.Student" Width="1.5" PointX="8.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="MBASystemModel.Type" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <AssociationConnector Association="MBASystemModel.FK_AlumiModule_Alumni" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_AlumiModule_Module" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_Alumni_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_Alumni_School" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_Course_Curriculum" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_Course_ICCSD" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_Course_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_Module_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_SchoolCurriculum_Curriculum" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_School_ICCSD" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_School_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_RegisteredModule_Module" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_RegisteredModule_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_SchoolCurriculum_School" ManuallyRouted="false" />
+        <AssociationConnector Association="MBASystemModel.FK_Student_School" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MBASystemModel.User" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
