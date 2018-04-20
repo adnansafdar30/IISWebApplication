@@ -13,49 +13,31 @@ namespace IISMyWebSite.Pages {
     public partial class Login {
         
         /// <summary>
-        /// form1 control.
+        /// inputEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox inputEmail;
         
         /// <summary>
-        /// lbllogin control.
+        /// inputPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbllogin;
+        protected global::System.Web.UI.WebControls.TextBox inputPassword;
         
         /// <summary>
-        /// Txtboxlogin control.
+        /// lblerror control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtboxlogin;
-        
-        /// <summary>
-        /// lblpassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblpassword;
-        
-        /// <summary>
-        /// txtboxpasspword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtboxpasspword;
+        protected global::System.Web.UI.WebControls.Label lblerror;
         
         /// <summary>
         /// btnlogin control.

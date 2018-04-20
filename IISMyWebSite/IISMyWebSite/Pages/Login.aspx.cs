@@ -19,20 +19,34 @@ namespace IISMyWebSite.Pages
         protected void btnlogin_Click(object sender, EventArgs e)
         {
             bool flag = false;
-            var usernmae = Txtboxlogin.Text.Trim();
-            var password = txtboxpasspword.Text.Trim();
-            foreach (var user in db.Users.Where(t=>t.Username==usernmae&&t.Password==password))
+            var usernmae = inputEmail.Text.Trim();
+            var password = inputPassword.Text.Trim();
+            foreach (var users in db.Users.Where(t => t.Username == usernmae && t.Password == password))
             {
                 flag = true;
-                //Session["user"] = user;
-                ((MasterPage)this.Master).currentUser = user;
 
-                // Response.Redirect("/Home.aspx");
+                //first way
+                ((MasterPage)this.Master).currentUser = users;
+
+                //SECOND WAY
+                MasterPage ms = new MasterPage();
+                ms.currentUser = users;
+
+                //THIRD WAY 
+                Session["user"] = users.User_ID;
+
+
+                Response.Redirect("~/pages/Home.aspx");
+
             }
-            if (flag)
+            if (!flag)
             {
-                
+                lblerror.Visible = true;
+                lblerror.Text = "Username Or Password is Incorrect!! Please Try Again";
             }
+        }
+        private void CreateLog(User user)
+        {
 
         }
     }

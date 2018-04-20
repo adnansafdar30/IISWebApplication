@@ -21,3 +21,4 @@ C:\Users\L00131104\Source\Repos\IISWebApplication\IISMyWebSite\IISMyWebSite\bin\
 C:\Users\L00131104\Source\Repos\IISWebApplication\IISMyWebSite\IISMyWebSite\bin\EntityFramework.SqlServer.dll
 C:\Users\L00131104\Source\Repos\IISWebApplication\IISMyWebSite\IISMyWebSite\bin\EntityFramework.xml
 C:\Users\L00131104\Source\Repos\IISWebApplication\IISMyWebSite\IISMyWebSite\bin\EntityFramework.SqlServer.xml
+C:\Users\L00131104\Source\Repos\IISWebApplication\IISMyWebSite\IISMyWebSite\obj\Debug\IISMyWebSite.csprojResolveAssemblyReference.cache

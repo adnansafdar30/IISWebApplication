@@ -10,10 +10,10 @@ namespace IISMyWebSite
     public partial class MasterPage : System.Web.UI.MasterPage
     {
         public User currentUser = new User();
-      //  User sesuser=
+     
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var a = HttpContext.Current.Session["user"].ToString();
         }
     }
 }

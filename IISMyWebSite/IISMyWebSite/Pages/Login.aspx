@@ -5,14 +5,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="../Styles/StyleSheet.css" rel="stylesheet" />
+    <link href="../Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Styles/signin.css" rel="stylesheet" />
 </head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:Label ID="lbllogin" runat="server" Text="Login"></asp:Label><asp:TextBox ID="Txtboxlogin" runat="server"></asp:TextBox>
-            <asp:Label ID="lblpassword" runat="server" Text="Password"></asp:Label><asp:TextBox ID="txtboxpasspword" runat="server" Style="width: 128px"></asp:TextBox>
-            <asp:Button ID="btnlogin" runat="server" Text="Login" OnClick="btnlogin_Click" />
+<body class="text-center">
+    <form class="form-signin" runat="server">
+        <img src="../Images/images%20(1).jpg" alt="" />
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" runat="server" class="sr-only">Email address</label>
+        <asp:TextBox ID="inputEmail" runat="server" class="form-control" placeholder="Email address" required autofocus></asp:TextBox>
+        <label for="inputPassword" runat="server" class="sr-only">Password</label>
+        <asp:TextBox ID="inputPassword" runat="server" type="password" class="form-control" placeholder="Password" required></asp:TextBox>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me" />
+                Remember me
+            </label>
         </div>
+        <div class="alert alert-danger">
+            <asp:Label ID="lblerror" runat="server" Text="label error" Visible="false"></asp:Label>
+        </div>
+
+        <asp:Button ID="btnlogin" runat="server" Text="Login" OnClick="btnlogin_Click" class="btn btn-lg btn-primary btn-block" type="submit" />
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
 </body>
+
 </html>
