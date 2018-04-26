@@ -10,6 +10,7 @@ namespace IISMyWebSite.Pages
     public partial class Login : System.Web.UI.Page
     {
         MBASystemEntities db = new MBASystemEntities();
+        User u = new User();
         //User user = new IISMyWebSite.User();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,20 +25,16 @@ namespace IISMyWebSite.Pages
             foreach (var users in db.Users.Where(t => t.Username == usernmae && t.Password == password))
             {
                 flag = true;
+                u = users;
 
-                //first way
-                ((MasterPage)this.Master).currentUser = users;
 
-                //SECOND WAY
-                MasterPage ms = new MasterPage();
-                ms.currentUser = users;
-
-                //THIRD WAY 
-                Session["user"] = users.User_ID;
+            }
+            if (flag)
+            {
+                Session["user"] = u;
 
 
                 Response.Redirect("~/pages/Home.aspx");
-
             }
             if (!flag)
             {

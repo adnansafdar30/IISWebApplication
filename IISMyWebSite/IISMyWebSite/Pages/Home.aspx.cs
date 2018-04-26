@@ -11,7 +11,12 @@ namespace IISMyWebSite.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session.Count == 1)
+            {
+                User u = (User)Session["user"];
+                lbldisplay.Text = "Welcom "+ u.Username+". Please Find reports in Report Page. thank you";
+            }
+            else { Response.Redirect("Login.aspx"); }
         }
     }
 }

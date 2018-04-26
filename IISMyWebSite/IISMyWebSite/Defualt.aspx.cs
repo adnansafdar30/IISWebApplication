@@ -5,18 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace IISMyWebSite.Pages
+namespace IISMyWebSite
 {
-    public partial class Reports : System.Web.UI.Page
+    public partial class Defualt : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void EmployeesListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            Response.Redirect("~/Pages/Login.aspx");
         }
     }
 }
