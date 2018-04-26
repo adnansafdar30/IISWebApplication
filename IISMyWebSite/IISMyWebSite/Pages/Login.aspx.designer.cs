@@ -31,15 +31,6 @@ namespace IISMyWebSite.Pages {
         protected global::System.Web.UI.WebControls.TextBox inputPassword;
         
         /// <summary>
-        /// lblerror control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblerror;
-        
-        /// <summary>
         /// btnlogin control.
         /// </summary>
         /// <remarks>
@@ -47,5 +38,14 @@ namespace IISMyWebSite.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnlogin;
+        
+        /// <summary>
+        /// lblerror control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblerror;
     }
 }

@@ -66,6 +66,15 @@
     <Property Name="Major_City" Type="varchar" MaxLength="50" />
     <Property Name="County" Type="varchar" MaxLength="20" />
   </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Action" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="150" />
+  </EntityType>
   <EntityType Name="Module">
     <Key>
       <PropertyRef Name="Module_Code" />
@@ -325,6 +334,7 @@ warning 6002: The table/view 'MBASystem.dbo.Users' does not have a primary key d
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ICCSD" EntityType="Self.ICCSD" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Module" EntityType="Self.Module" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RegisteredModule" EntityType="Self.RegisteredModule" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="School" EntityType="Self.School" Schema="dbo" store:Type="Tables" />

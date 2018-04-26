@@ -14,7 +14,7 @@ namespace IISMyWebSite.Pages
             if (Session.Count == 1)
             {
                 User u = (User)Session["user"];
-                lbldisplay.Text = "Welcom "+ u.Username+". Please Find reports in Report Page. thank you";
+                lbldisplay.Text = "Welcome " + u.Username + ". Please Find reports in Report Page. thank you";
             }
             else { Response.Redirect("Login.aspx"); }
         }

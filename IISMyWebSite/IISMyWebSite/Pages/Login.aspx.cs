@@ -26,25 +26,24 @@ namespace IISMyWebSite.Pages
             {
                 flag = true;
                 u = users;
-
-
             }
             if (flag)
             {
                 Session["user"] = u;
-
-
+                LogsClass l = new LogsClass();
+                l.createLog(u.Username, "LogIn Attempt", "Success");
                 Response.Redirect("~/pages/Home.aspx");
             }
             if (!flag)
             {
+
                 lblerror.Visible = true;
+                LogsClass l = new LogsClass();
+                l.createLog(u.Username, "LogIn Attempt", "Fail");
+
                 lblerror.Text = "Username Or Password is Incorrect!! Please Try Again";
             }
         }
-        private void CreateLog(User user)
-        {
 
-        }
     }
 }

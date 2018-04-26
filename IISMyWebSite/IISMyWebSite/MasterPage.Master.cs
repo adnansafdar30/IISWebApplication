@@ -10,10 +10,20 @@ namespace IISMyWebSite
     public partial class MasterPage : System.Web.UI.MasterPage
     {
         public User currentUser = new User();
-     
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            var a = HttpContext.Current.Session["user"].ToString();
+        }
+
+        protected void btnOut_Click(object sender, EventArgs e)
+        {
+            Session["user"] = currentUser;
+            LogsClass l = new LogsClass();
+            l.createLog(currentUser.Username, "Sign Out", "Success");
+
+            Session["user"] = null;
+
+            Response.Redirect("Login.aspx");
         }
     }
 }

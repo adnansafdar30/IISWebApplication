@@ -25,12 +25,14 @@
                 Remember me
             </label>
         </div>
-        <div class="alert alert-danger">
+      
+        <asp:button id="btnlogin" runat="server" text="Login" onclick="btnlogin_Click" class="btn btn-lg btn-primary btn-block" type="submit" />
+          <div class="alert alert-danger">
             <asp:label id="lblerror" runat="server" text="label error" visible="false"></asp:label>
         </div>
+        <p class="mt-5 mb-3 text-muted">&copy;Adnan Safdar     2017-2018</p>
+        <p class="mt-5 mb-3 text-muted">2018-2019</p>
 
-        <asp:button id="btnlogin" runat="server" text="Login" onclick="btnlogin_Click" class="btn btn-lg btn-primary btn-block" type="submit" />
-        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
 </body>
 

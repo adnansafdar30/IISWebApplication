@@ -78,6 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Defualt.aspx" />
+    <Content Include="Images\11004002_618069018325455_1441696677_n.jpg" />
+    <Content Include="Images\11006204_618064061659284_1721085341_n.jpg" />
+    <Content Include="Images\11014778_618063858325971_1424517485_n.jpg" />
+    <Content Include="Images\11084463_639545962844427_625803949_n.jpg" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
     <EntityDeploy Include="IISDB.edmx">
@@ -114,6 +118,7 @@
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Reports.aspx" />
     <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\round-about.css" />
     <Content Include="Styles\signin.css" />
     <Content Include="Styles\StyleSheet.css" />
     <Content Include="Web.config" />
@@ -162,6 +167,10 @@
     <Compile Include="Location.cs">
       <DependentUpon>IISDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Log.cs">
+      <DependentUpon>IISDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogsClass.cs" />
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
