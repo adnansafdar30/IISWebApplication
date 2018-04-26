@@ -38,7 +38,7 @@ namespace IISMyWebSite
         public virtual DbSet<SchoolCurriculum> SchoolCurriculums { get; set; }
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Type> Types { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Log> Logs { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

@@ -139,13 +139,9 @@
           <Property Name="Type_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Type_Name" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MBASystem.dbo.Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="User_ID" />
-            <PropertyRef Name="Username" />
-            <PropertyRef Name="Password" />
           </Key>
           <Property Name="User_ID" Type="int" Nullable="false" />
           <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -346,13 +342,7 @@ warning 6002: The table/view 'MBASystem.dbo.Users' does not have a primary key d
           <EntitySet Name="SchoolCurriculum" EntityType="Self.SchoolCurriculum" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Users" EntityType="Self.Users" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Users].[User_ID] AS [User_ID], 
-    [Users].[Username] AS [Username], 
-    [Users].[Password] AS [Password]
-    FROM [dbo].[Users] AS [Users]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_AlumiModule_Alumni" Association="Self.FK_AlumiModule_Alumni">
             <End Role="Alumni" EntitySet="Alumni" />
             <End Role="AlumiModule" EntitySet="AlumiModule" />
@@ -827,19 +817,9 @@ warning 6002: The table/view 'MBASystem.dbo.Users' does not have a primary key d
             <End Role="School" EntitySet="Schools" />
             <End Role="Student" EntitySet="Students" />
           </AssociationSet>
-          <EntitySet Name="Users" EntityType="MBASystemModel.User" />
           <EntitySet Name="Logs" EntityType="MBASystemModel.Log" />
+          <EntitySet Name="Users" EntityType="MBASystemModel.User" />
         </EntityContainer>
-        <EntityType Name="User">
-          <Key>
-            <PropertyRef Name="User_ID" />
-            <PropertyRef Name="Username" />
-            <PropertyRef Name="Password" />
-          </Key>
-          <Property Name="User_ID" Type="Int32" Nullable="false" />
-          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="Log">
           <Key>
             <PropertyRef Name="Id" />
@@ -848,6 +828,14 @@ warning 6002: The table/view 'MBASystem.dbo.Users' does not have a primary key d
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Action" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -993,15 +981,6 @@ warning 6002: The table/view 'MBASystem.dbo.Users' does not have a primary key d
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="MBASystemModel.User">
-              <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Logs">
             <EntityTypeMapping TypeName="MBASystemModel.Log">
               <MappingFragment StoreEntitySet="Logs">
@@ -1009,6 +988,15 @@ warning 6002: The table/view 'MBASystem.dbo.Users' does not have a primary key d
                 <ScalarProperty Name="Action" ColumnName="Action" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MBASystemModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -22,10 +22,15 @@ namespace IISMyWebSite.Pages
             bool flag = false;
             var usernmae = inputEmail.Text.Trim();
             var password = inputPassword.Text.Trim();
-            foreach (var users in db.Users.Where(t => t.Username == usernmae && t.Password == password))
+            foreach (var users in db.Users)
+            //.Where(t => t.Username == usernmae && t.Password == password))
+
             {
-                flag = true;
-                u = users;
+                if (users.Username == usernmae && users.Password == password)
+                {
+                    flag = true;
+                    u = users;
+                }
             }
             if (flag)
             {
