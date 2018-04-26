@@ -24,37 +24,37 @@
       <th scope="row" class="auto-style1">1</th>
       <td>Graduates Total</td>
       <td>To report total number of graduates per year </td>
-      <td>@mdo</td>
+      <td>http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_TotalGraduates&rs:Command=Render</td>
     </tr>
     <tr>
       <th scope="row" class="auto-style1">2</th>
       <td>Total Students enrolled</td>
       <td>To report total number of students enrolled in MBA Program per year</td>
-      <td>@fat</td>
+      <td>http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_TotalEnrolled&rs:Command=Render</td>
     </tr>
     <tr>
       <th scope="row" class="auto-style1">3</th>
       <td>Total Students as Top Management</td>
       <td>To report total number of students who have top position</td>
-      <td>@fat</td>
+      <td>http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_topPosition&rs:Command=Render</td>
     </tr>
     <tr>
       <th scope="row" class="auto-style1">4</th>
       <td>Total Students enrolled</td>
       <td>To report total number of students enrolled in MBA Program per year</td>
-      <td>@fat</td>
+      <td>http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_ICCSB&rs:Command=Render</td>
     </tr>
     <tr>
       <th scope="row" class="auto-style1">5</th>
       <td>Total Students enrolled</td>
       <td>To report total number of students enrolled in MBA Program per year</td>
-      <td>@fat</td>
+      <td>http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem-AverageRatio&rs:Command=Render</td>
     </tr>
     <tr>
       <th scope="row" class="auto-style1">6</th>
       <td>Total Students enrolled</td>
       <td>To report total number of students enrolled in MBA Program per year</td>
-      <td>@fat</td>
+      <td>http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_GPAAverage&rs:Command=Render</td>
     </tr>
    
   </tbody>
