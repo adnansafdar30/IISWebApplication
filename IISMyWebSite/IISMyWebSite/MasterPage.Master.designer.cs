@@ -49,6 +49,15 @@ namespace IISMyWebSite {
         protected global::System.Web.UI.WebControls.Menu Menu1;
         
         /// <summary>
+        /// lbldisplay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbldisplay;
+        
+        /// <summary>
         /// btnOut control.
         /// </summary>
         /// <remarks>

@@ -11,7 +11,10 @@ namespace IISMyWebSite.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session.Count == 1)
+            {
+            }
+            else { Response.Redirect("Login.aspx"); }
         }
 
         protected void EmployeesListView_SelectedIndexChanged(object sender, EventArgs e)

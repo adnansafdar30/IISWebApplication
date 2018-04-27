@@ -82,6 +82,7 @@
     <Content Include="Images\11006204_618064061659284_1721085341_n.jpg" />
     <Content Include="Images\11014778_618063858325971_1424517485_n.jpg" />
     <Content Include="Images\11084463_639545962844427_625803949_n.jpg" />
+    <Content Include="Images\MBASystem.jpg" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
     <EntityDeploy Include="IISDB.edmx">
@@ -92,6 +93,7 @@
       <DependentUpon>IISDB.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\IISMyWebSite20180426071136 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\MBASystem - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">

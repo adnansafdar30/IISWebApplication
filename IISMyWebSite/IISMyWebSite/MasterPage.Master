@@ -23,6 +23,8 @@
             </asp:Menu>
         </div>
         <div style="float: right">
+            <asp:Label runat="server"  id="lbldisplay" ></asp:Label>
+
             <asp:Button ID="btnOut" runat="server" class="btn btn-outline-warning" Text="Sign Out" OnClick="btnOut_Click" />
         </div>
         <div id="content">

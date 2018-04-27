@@ -13,6 +13,12 @@ namespace IISMyWebSite
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session.Count == 1)
+            {
+                User u = (User)Session["user"];
+                lbldisplay.Text = "Welcome " + u.Username + "!! ";
+            }
+            else { Response.Redirect("Login.aspx"); }
         }
 
         protected void btnOut_Click(object sender, EventArgs e)
