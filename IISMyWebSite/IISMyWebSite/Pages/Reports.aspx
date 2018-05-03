@@ -21,32 +21,32 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_TotalGraduates&rs:Command=Render" class="badge badge-info" >Graduates Total</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_TotalGraduates&rs:Command=Render" class="badge badge-info" >Graduates Total</a></td>
                 <td>To report total number of graduates per year </td>
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_TotalEnrolled&rs:Command=Render" class="badge badge-info">Total Students enrolled</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_TotalEnrolled&rs:Command=Render" class="badge badge-info">Total Students enrolled</a></td>
                 <td>To report total number of students enrolled in MBA Program per year</td>
             </tr>
             <tr>
                 <th scope="row">3</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_topPosition&rs:Command=Render" class="badge badge-info">Total Students as Top Management</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_topPosition&rs:Command=Render" class="badge badge-info">Total Students as Top Management</a></td>
                 <td>To report total number of students who have top position</td>
             </tr>
             <tr>
                 <th scope="row">4</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_ICCSB&rs:Command=Render" class="badge badge-info">Total Students enrolled</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_ICCSB&rs:Command=Render" class="badge badge-info">Total Students enrolled</a></td>
                 <td>To report total number of students enrolled in MBA Program per year</td>
             </tr>
             <tr>
                 <th scope="row">5</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem-AverageRatio&rs:Command=Render" class="badge badge-info">Total Students enrolled</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem-AverageRatio&rs:Command=Render" class="badge badge-info">Total Students enrolled</a></td>
                 <td>To report total number of students enrolled in MBA Program per year</td>
             </tr>
             <tr>
                 <th scope="row">6</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_GPAAverage&rs:Command=Render" class="badge badge-info">Total Students enrolled</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBASystem_GPAAverage&rs:Command=Render" class="badge badge-info">Total Students enrolled</a></td>
                 <td>To report total number of students enrolled in MBA Program per year</td>
             </tr>
         </tbody>
@@ -64,22 +64,22 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBA_Quality_11&rs:Command=Render" class="badge badge-info">School Names (Promote)</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBA_Quality_11&rs:Command=Render" class="badge badge-info">School Names (Promote)</a></td>
                 <td>To report total number of graduates per year</td>
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBA_Quality_2&rs:Command=Render" class="badge badge-info">CEO Company Names</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBA_Quality_2&rs:Command=Render" class="badge badge-info">CEO Company Names</a></td>
                 <td>List of Graduates working as CEO and with company names </td>
             </tr>
             <tr>
                 <th scope="row">3</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBA_Quality_3&rs:Command=Render" class="badge badge-info">High Pay Graduate</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBA_Quality_3&rs:Command=Render" class="badge badge-info">High Pay Graduate</a></td>
                 <td>List of graduates with high wage with GPA </td>
             </tr>
             <tr>
                 <th scope="row">4</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBA_Quality_4&rs:Command=Render" class="badge badge-info">Name and Employee</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fMBA_Quality_4&rs:Command=Render" class="badge badge-info">Name and Employee</a></td>
                 <td>To report each graduate with GPA 3.3 or higher with position
                 </td>
             </tr>
@@ -99,7 +99,7 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fExisitingCurriculum&rs:Command=Render" class="badge badge-info">Existing Curriculum</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fExisitingCurriculum&rs:Command=Render" class="badge badge-info">Existing Curriculum</a></td>
                 <td>To report number of schools currently using Curriculum and courses offered and year of curriculum added</td>
             </tr>
         </tbody>
@@ -117,7 +117,7 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fManagementPostions&rs:Command=Render" class="badge badge-info">Total Graduate Percentage </a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fManagementPostions&rs:Command=Render" class="badge badge-info">Total Graduate Percentage </a></td>
                 <td>To report total percentage of MBA graduates who are currently have top position and with company.
                 </td>
             </tr>
@@ -137,7 +137,7 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fICCSB+Accreditation&rs:Command=Render" class="badge badge-info">Accredited Program</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fICCSB+Accreditation&rs:Command=Render" class="badge badge-info">Accredited Program</a></td>
                 <td>To report each program with number of years ICCSB accredited</td>
             </tr>
         </tbody>
@@ -155,17 +155,17 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fFoundational_Courses&rs:Command=Render" class="badge badge-info">Students with Foundational Courses</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fFoundational_Courses&rs:Command=Render" class="badge badge-info">Students with Foundational Courses</a></td>
                 <td>To report total number of Students who completed Foundational Courses </td>
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fFoundational_Courses&rs:Command=Render" class="badge badge-info">Students yet to complete Foundational Course</a></td>
+                <td><a target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fFoundational_Courses&rs:Command=Render" class="badge badge-info">Students yet to complete Foundational Course</a></td>
                 <td>To report total number of students who did not completed Foundational Course. How much time left</td>
             </tr>
             <tr>
                 <th scope="row">3</th>
-                <td><a href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fFoundational_Courses&rs:Command=Render" class="badge badge-info">Total Students Postponed Degree</a></td>
+                <td><a  target="_blank" href="http://172.28.134.10/ReportServer/Pages/ReportViewer.aspx?%2fMBASystem_Adnan%2fFoundational_Courses&rs:Command=Render" class="badge badge-info">Total Students Postponed Degree</a></td>
                 <td>To report total students who will post pones their graduation s they not completed foundational course
 
                 </td>
