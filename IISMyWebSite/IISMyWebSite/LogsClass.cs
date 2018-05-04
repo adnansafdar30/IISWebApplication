@@ -10,13 +10,13 @@ namespace IISMyWebSite
     {
         public void createLog(string name, string action, string desc)
         {
-            MBASystemEntities db = new MBASystemEntities();
-            Log l = new Log();
-            l.Name = name;
+            MBASystemEntities db = new MBASystemEntities();//db instance
+            Log l = new Log();//logs calss object
+            l.Name = name;//setting paramenter values
             l.Action = action;
             l.Description = desc;
-            db.Logs.Add(l);
-            db.SaveChanges();
+            db.Logs.Add(l);//adding in db
+            db.SaveChanges();//saving in database
         }
     }
 }

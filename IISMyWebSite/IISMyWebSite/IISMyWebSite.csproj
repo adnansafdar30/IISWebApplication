@@ -77,7 +77,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Defualt.aspx" />
     <Content Include="Images\11004002_618069018325455_1441696677_n.jpg" />
     <Content Include="Images\11006204_618064061659284_1721085341_n.jpg" />
     <Content Include="Images\11014778_618063858325971_1424517485_n.jpg" />
@@ -139,13 +138,6 @@
     </Compile>
     <Compile Include="Curriculum.cs">
       <DependentUpon>IISDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Defualt.aspx.cs">
-      <DependentUpon>Defualt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Defualt.aspx.designer.cs">
-      <DependentUpon>Defualt.aspx</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>IISDB.tt</DependentUpon>
